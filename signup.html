@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create an Account</h2>
+        <form>
+            <label for="role">I am a:</label>
+            <select id="role" name="role" required>
+                <option value="company">Company</option>
+                <option value="employee">Employee</option>
+            </select>
+
+            <!-- Company Information -->
+            <div id="company-fields">
+                <label for="companyUsername">Company Username:</label>
+                <input type="text" id="companyUsername" name="companyUsername" required>
+
+                <label for="companyPassword">Company Password:</label>
+                <input type="password" id="companyPassword" name="companyPassword" required>
+
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+
+                <label for="companyField">Industry Field:</label>
+                <select id="companyField" name="companyField" required>
+                    <option value="construction">Construction</option>
+                    <option value="education">Education</option>
+                    <option value="medical">Medical</option>
+                </select>
+
+                <!-- Add more company fields as needed -->
+
+                <label for="companyInfo">Additional Company Info:</label>
+                <textarea id="companyInfo" name="companyInfo"></textarea>
+            </div>
+
+            <!-- Employee Information -->
+            <div id="employee-fields" style="display: none;">
+                <label for="employeeUsername">Employee Username:</label>
+                <input type="text" id="employeeUsername" name="employeeUsername" required>
+
+                <label for="employeePassword">Employee Password:</label>
+                <input type="password" id="employeePassword" name="employeePassword" required>
+
+                <label for="employeeName">Employee Name:</label>
+                <input type="text" id="employeeName" name="employeeName" required>
+
+                <label for="employeeBranch">Military Branch:</label>
+                <input type="text" id="employeeBranch" name="employeeBranch" required>
+
+                <label for="employeeMOSAFSC">MOS/AFSC:</label>
+                <input type="text" id="employeeMOSAFSC" name="employeeMOSAFSC" required>
+
+                <label for="employeeField">Interested Field:</label>
+                <select id="employeeField" name="employeeField" required>
+                    <option value="construction">Construction</option>
+                    <option value="education">Education</option>
+                    <option value="medical">Medical</option>
+                </select>
+
+                <label for="skillbridgeStart">Skillbridge Start Date:</label>
+                <input type="date" id="skillbridgeStart" name="skillbridgeStart" required>
+
+                <label for="serviceEndDate">End of Service Date:</label>
+                <input type="date" id="serviceEndDate" name="serviceEndDate" required>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('role').addEventListener('change', function () {
+            var companyFields = document.getElementById('company-fields');
+            var employeeFields = document.getElementById('employee-fields');
+
+            if (this.value === 'company') {
+                companyFields.style.display = 'block';
+                employeeFields.style.display = 'none';
+            } else {
+                companyFields.style.display = 'none';
+                employeeFields.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> daab259 (Initial commit)

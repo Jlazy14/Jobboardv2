@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .tab.active {
+            background-color: #0056b3;
+        }
+
+        .post-form {
+            margin-bottom: 20px;
+        }
+
+        .post {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome, [Employer Name]!</h1>
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('feed')">Feed</div>
+            <div class="tab" onclick="showTab('following')">Following</div>
+            <div class="tab" onclick="showTab('bestFits')">Best Fits</div>
+            <!-- Add more tabs as needed -->
+        </div>
+
+        <div id="feedTab">
+            <h2>Your Feed</h2>
+            <form class="post-form">
+                <textarea rows="4" placeholder="Share updates, job openings, etc."></textarea>
+                <button type="submit">Post</button>
+            </form>
+
+            <div class="post">
+                <!-- Display posts dynamically here from users that the employer follows -->
+                <p>Sample Post Content from Followed User</p>
+            </div>
+            <!-- Add more posts dynamically -->
+        </div>
+
+        <div id="followingTab" style="display: none;">
+            <h2>Following</h2>
+            <!-- Display posts from users that the employer follows dynamically here -->
+            <p>See updates from users you are following.</p>
+        </div>
+
+        <div id="bestFitsTab" style="display: none;">
+            <h2>Best Fits</h2>
+            <!-- Display best fits dynamically here -->
+            <p>These users best align with your company's needs.</p>
+        </div>
+        <!-- Add content for other tabs as needed -->
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.getElementById('feedTab').style.display = 'none';
+            document.getElementById('followingTab').style.display = 'none';
+            document.getElementById('bestFitsTab').style.display = 'none';
+            // Add more tabs as needed
+
+            // Show the selected tab
+            document.getElementById(tabName + 'Tab').style.display = 'block';
+
+            // Update active state in tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.querySelector('.tab.' + tabName).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
