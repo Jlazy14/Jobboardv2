@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillbridge FAQs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+
+        .answer {
+            display: none;
+            margin-left: 20px;
+        }
+
+        .answer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Skillbridge FAQs</h1>
+    </header>
+
+    <div class="container">
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('faq1')">What is Skillbridge?</div>
+            <div class="answer" id="faq1">
+                <p>Skillbridge is a Department of Defense (DoD) initiative that allows service members to gain valuable
+                    civilian work experience through specific industry training, apprenticeships, and internships during
+                    the last 180 days of service.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('faq2')">Who is eligible for Skillbridge?</div>
+            <div class="answer" id="faq2">
+                <p>Service members who are expected to be discharged or released from active duty service under
+                    honorable conditions may be eligible for Skillbridge.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('faq3')">How do I apply for Skillbridge?</div>
+            <div class="answer" id="faq3">
+                <p>Service members interested in Skillbridge should contact their respective Skillbridge Program
+                    Coordinator or Transition Assistance Program (TAP) office.</p>
+            </div>
+        </div>
+
+        <!-- Add more FAQs as needed -->
+
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

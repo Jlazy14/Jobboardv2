@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employer Homepage</title>
+    <title>Employee Homepage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,7 +19,6 @@
             color: #fff;
             padding: 1em;
             text-align: center;
-            position: relative;
         }
 
         .search-bar {
@@ -101,7 +100,7 @@
         .notifications-dropdown {
             display: none;
             position: absolute;
-            top: calc(100% + 10px);
+            top: 100%;
             right: 0;
             background-color: #fff;
             border: 1px solid #ccc;
@@ -130,55 +129,37 @@
 
 <body>
     <header>
-        <h1>Welcome, [Employer Name]!</h1>
-        <div class="notifications-icon" onclick="toggleNotifications()">
-            <img src="notification-icon.png" alt="Notifications">
-            <div class="notifications-dropdown" id="notificationsDropdown">
-                <div class="notification-item">Notification 1</div>
-                <div class="notification-item">Notification 2</div>
-                <div class="notification-item">Notification 3</div>
-                <!-- Add more notification items here -->
-            </div>
-        </div>
+        <h1>Welcome, [Employee Name]!</h1>
     </header>
-
     <div class="search-bar">
-        <input type="text" placeholder="Search for users or jobs...">
+        <input type="text" placeholder="Search for jobs...">
         <button type="button">Search</button>
     </div>
 
     <div class="container">
         <div class="tabs">
-            <div class="tab active" onclick="showTab('feed')">Feed</div>
-            <div class="tab" onclick="showTab('bestFits')">Best Fits</div>
-            <div class="tab" onclick="showTab('followingFeed')">Following Feed</div>
+            <div class="tab active" onclick="showTab('recommended')">Recommended</div>
+            <div class="tab" onclick="showTab('saved')">Saved</div>
+            <div class="tab" onclick="showTab('applied')">Applied</div>
             <!-- Add more tabs as needed -->
         </div>
 
-        <div id="feedTab">
-            <h2>Your Feed</h2>
-            <form class="post-form">
-                <textarea rows="4" placeholder="Share updates, job openings, etc."></textarea>
-                <button type="submit">Post</button>
-            </form>
-
-            <div class="post">
-                <!-- Display employer's own posts dynamically here -->
-                <p>Sample Post Content (Your Post)</p>
-            </div>
-            <!-- Add more posts dynamically -->
+        <div id="recommendedTab">
+            <h2>Recommended Jobs</h2>
+            <!-- Display recommended jobs dynamically here -->
+            <p>These jobs are recommended for you based on your profile.</p>
         </div>
 
-        <div id="bestFitsTab" style="display: none;">
-            <h2>Best Fits</h2>
-            <!-- Display best fits dynamically here -->
-            <p>These users best align with your company's needs.</p>
+        <div id="savedTab" style="display: none;">
+            <h2>Saved Jobs</h2>
+            <!-- Display saved jobs dynamically here -->
+            <p>Jobs you have saved for later viewing.</p>
         </div>
 
-        <div id="followingFeedTab" class="following-feed" style="display: none;">
-            <h2>Following Feed</h2>
-            <!-- Display posts from followed users dynamically here -->
-            <p>Posts from users you follow will appear here.</p>
+        <div id="appliedTab" style="display: none;">
+            <h2>Applied Jobs</h2>
+            <!-- Display applied jobs dynamically here -->
+            <p>Jobs you have applied for.</p>
         </div>
         <!-- Add content for other tabs as needed -->
     </div>
@@ -186,9 +167,9 @@
     <script>
         function showTab(tabName) {
             // Hide all tabs
-            document.getElementById('feedTab').style.display = 'none';
-            document.getElementById('bestFitsTab').style.display = 'none';
-            document.getElementById('followingFeedTab').style.display = 'none';
+            document.getElementById('recommendedTab').style.display = 'none';
+            document.getElementById('savedTab').style.display = 'none';
+            document.getElementById('appliedTab').style.display = 'none';
             // Add more tabs as needed
 
             // Show the selected tab
@@ -198,16 +179,6 @@
             const tabs = document.querySelectorAll('.tab');
             tabs.forEach(tab => tab.classList.remove('active'));
             document.querySelector('.tab.' + tabName).classList.add('active');
-
-            // If switching to the Following Feed tab, fetch and display posts from followed users
-            if (tabName === 'followingFeed') {
-                // Implement logic to fetch and display posts from followed users
-            }
-        }
-
-        function toggleNotifications() {
-            const dropdown = document.getElementById('notificationsDropdown');
-            dropdown.classList.toggle('active');
         }
     </script>
 </body>
