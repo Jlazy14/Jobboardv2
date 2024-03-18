@@ -4,148 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Employer Homepage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            position: relative;
-        }
-
-        .search-bar {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .search-bar input {
-            padding: 8px;
-            border: none;
-            border-radius: 4px;
-            margin-right: 8px;
-        }
-
-        .search-bar button {
-            background-color: #0056b3;
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .tabs {
-            display: flex;
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            background-color: #007BFF;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 5px;
-        }
-
-        .tab.active {
-            background-color: #0056b3;
-        }
-
-        .post-form {
-            margin-bottom: 20px;
-        }
-
-        .post {
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
-        .following-feed {
-            display: none;
-        }
-
-        .notifications-icon {
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-
-        .notifications-dropdown {
-            display: none;
-            position: absolute;
-            top: calc(100% + 10px);
-            right: 0;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-top: none;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            min-width: 200px;
-        }
-
-        .notifications-dropdown.active {
-            display: block;
-        }
-
-        .notification-item {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-            cursor: pointer;
-        }
-
-        .notification-item:last-child {
-            border-bottom: none;
-        }
-    </style>
 </head>
-
+<style>
+    .container{   
+    display: auto;
+    justify-content: center; 
+    align-items: center; /* Vertically center the contents */
+    }
+</style>
 <body>
     <header>
         <h1>Welcome, [Employer Name]!</h1>
-        <div class="notifications-icon" onclick="toggleNotifications()">
-            <img src="notification-icon.png" alt="Notifications">
-            <div class="notifications-dropdown" id="notificationsDropdown">
-                <div class="notification-item">Notification 1</div>
-                <div class="notification-item">Notification 2</div>
-                <div class="notification-item">Notification 3</div>
-                <!-- Add more notification items here -->
-            </div>
         </div>
     </header>
+
 
     <div class="search-bar">
         <input type="text" placeholder="Search for users or jobs...">
         <button type="button">Search</button>
-    </div>
+ </div>
 
     <div class="container">
         <div class="tabs">
@@ -182,34 +62,7 @@
         </div>
         <!-- Add content for other tabs as needed -->
     </div>
-
-    <script>
-        function showTab(tabName) {
-            // Hide all tabs
-            document.getElementById('feedTab').style.display = 'none';
-            document.getElementById('bestFitsTab').style.display = 'none';
-            document.getElementById('followingFeedTab').style.display = 'none';
-            // Add more tabs as needed
-
-            // Show the selected tab
-            document.getElementById(tabName + 'Tab').style.display = 'block';
-
-            // Update active state in tabs
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            document.querySelector('.tab.' + tabName).classList.add('active');
-
-            // If switching to the Following Feed tab, fetch and display posts from followed users
-            if (tabName === 'followingFeed') {
-                // Implement logic to fetch and display posts from followed users
-            }
-        }
-
-        function toggleNotifications() {
-            const dropdown = document.getElementById('notificationsDropdown');
-            dropdown.classList.toggle('active');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
