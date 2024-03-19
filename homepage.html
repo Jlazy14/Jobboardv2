@@ -4,66 +4,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Employer Homepage</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="new.css">
+    <title>User Dashboard</title>
 </head>
-<style>
-    .container{   
-    display: auto;
-    justify-content: center; 
-    align-items: center; /* Vertically center the contents */
-    }
-</style>
+
 <body>
-    <header>
-        <h1>Welcome, [Employer Name]!</h1>
-        </div>
-    </header>
-
-
-    <div class="search-bar">
-        <input type="text" placeholder="Search for users or jobs...">
-        <button type="button">Search</button>
- </div>
 
     <div class="container">
-        <div class="tabs">
-            <div class="tab active" onclick="showTab('feed')">Feed</div>
-            <div class="tab" onclick="showTab('bestFits')">Best Fits</div>
-            <div class="tab" onclick="showTab('followingFeed')">Following Feed</div>
-            <div class="tab" onclick="window.location.href = 'faq.html'">FAQs</div>
-          <!-- Add more tabs as needed -->
-        </div>
 
-        <div id="feedTab">
-            <h2>Your Feed</h2>
-            <form class="post-form">
-                <textarea rows="4" placeholder="Share updates, job openings, etc."></textarea>
-                <button type="submit">Post</button>
-            </form>
-
-            <div class="post">
-                <!-- Display employer's own posts dynamically here -->
-                <p>Sample Post Content (Your Post)</p>
+     <aside>
+        <div class="toggle">
+            <div class="logo">
+                <img src="images/vclogo.png">
+                <h2>Veteran<span class="primary">Connections</span></h2>
             </div>
-            <!-- Add more posts dynamically -->
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">
+                    close
+                </span>
+            </div>
         </div>
 
-        <div id="bestFitsTab" style="display: none;">
-            <h2>Best Fits</h2>
-            <!-- Display best fits dynamically here -->
-            <p>These users best align with your company's needs.</p>
+        <div class="sidebar">
+            <a href="#">
+                <span class="material-icons-sharp">
+                    dashboard
+                </span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    person_outline
+                </span>
+                <h3>Friends</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    chat
+                </span>
+                <h3>Messages</h3>
+                <span class="message-count">2</span>
+            </a>
+            <a href="#" >
+                <span class="material-icons-sharp">
+                    insights
+                </span>
+                <h3>Analytics</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    bookmark
+                    </span>
+                <h3>Saved Jobs</h3>
+            </a>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    quiz
+                    </span>
+                <h3>FAQs</h3>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    sticky_note_2
+                    </span>
+                <h3>Post</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    settings
+                    </span>
+                <h3>Settings</h3>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    logout
+                    </span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
+     <!-- Main Content -->
+    <main>
+        <h1>Analytics</h1>
+            <!-- Analyses -->
+        <div class="analyse">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                        <h3>Total Listings</h3>
+                            <h1>3,225</h1>
+                        </div>
+                        <div class="progresss">
+                          <svg>
+                               <circle cx="38" cy="38" r="36"></circle>
+                         </svg>
+                         <div class="percentage">
+                             <p>+81%</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visits">
+                <div class="status">
+                    <div class="info">
+                        <h3>New Listings</h3>
+                        <h1>128</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>-48%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searches">
+                <div class="status">
+                    <div class="info">
+                        <h3>Profile Views</h3>
+                        <h1>55</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>+21%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Analyses -->
+             <!-- New Users Section -->
+             <div class="new-users">
+                <h2>Best Fits</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="images/profile-2.jpg">
+                        <h2>Hertz</h2>
+                        <p>Washington, D.C.</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/profile-3.jpg">
+                        <h2>Amazon</h2>
+                        <p>Philadelphia, PA</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/profile-4.jpg">
+                        <h2>Apple</h2>
+                        <p>Los Angeles, CA</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/plus.png">
+                        <h2>More</h2>
+                        <p>New Companies</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End of New Users Section -->
+            
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2>Recent Messages</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>User Organization</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+            <!-- End of Recent Orders -->
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Reza</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Username</h2>
+                    <p>Job <Title></Title></p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+            <div class="notification deactive">
+                <div class="icon">
+                    <span class="material-icons-sharp">
+                        edit
+                    </span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>Workshop</h3>
+                        <small class="text_muted">
+                            08:00 AM - 12:00 PM
+                        </small>
+                    </div>
+                    <span class="material-icons-sharp">
+                        more_vert
+                    </span>
+                </div>
+            </div>
+
+            <div class="notification add-reminder">
+                <div>
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Add Reminder</h3>
+                </div>
+            </div>
+
         </div>
 
-        <div id="followingFeedTab" class="following-feed" style="display: none;">
-            <h2>Following Feed</h2>
-            <!-- Display posts from followed users dynamically here -->
-            <p>Posts from users you follow will appear here.</p>
-        </div>
-        <!-- Add content for other tabs as needed -->
     </div>
-    <script src="script.js"></script>
-</body>
 
+
+</div>
+
+        
+
+            
+
+
+
+</div>
+
+<script src="index.js"></script>
+</body>
 </html>
