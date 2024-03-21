@@ -47,7 +47,7 @@ body{
 }
 
 .container button{
-    background-color: #512da8;
+    background-color: #af1818;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -161,9 +161,9 @@ body{
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color: #0e157a;
     height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
+    background: linear-gradient(to right, #5466c9, #0e157a);
     color: #fff;
     position: relative;
     left: -100%;
@@ -299,7 +299,7 @@ body{
 }
 
 .post-form button {
-    background-color: #512da8;
+    background-color: #0e157a;
     color: #fff;
     border: none;
     border-radius: 5px;

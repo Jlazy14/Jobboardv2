@@ -4,169 +4,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Employee Homepage</title>
-    <style>
-        .search-bar {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .search-bar input {
-            padding: 8px;
-            border: none;
-            border-radius: 4px;
-            margin-right: 8px;
-        }
-
-        .search-bar button {
-            background-color: #0056b3;
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .tabs {
-            display: flex;
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            background-color: #007BFF;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 5px;
-        }
-
-        .tab.active {
-            background-color: #0056b3;
-        }
-
-        .post-form {
-            margin-bottom: 20px;
-        }
-
-        .post {
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
-        .following-feed {
-            display: none;
-        }
-
-        .notifications-icon {
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-
-        .notifications-dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-top: none;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            min-width: 200px;
-        }
-
-        .notifications-dropdown.active {
-            display: block;
-        }
-
-        .notification-item {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-            cursor: pointer;
-        }
-
-        .notification-item:last-child {
-            border-bottom: none;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="new.css">
+    <title>User Dashboard</title>
 </head>
 
 <body>
-    <header>
-        <h1>Welcome, [Employee Name]!</h1>
-    </header>
-    <div class="search-bar">
-        <input type="text" placeholder="Search for jobs...">
-        <button type="button">Search</button>
-    </div>
 
     <div class="container">
-        <div class="tabs">
-            <div class="tab active" onclick="showTab('recommended')">Recommended</div>
-            <div class="tab" onclick="showTab('saved')">Saved</div>
-            <div class="tab" onclick="showTab('applied')">Applied</div>
-            <!-- Add more tabs as needed -->
+
+     <aside>
+        <div class="toggle">
+            <div class="logo">
+                <img src="images/vclogo.png">
+                <h2>Veteran<span class="primary">Connections</span></h2>
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">
+                    close
+                </span>
+            </div>
         </div>
 
-        <div id="recommendedTab">
-            <h2>Recommended Jobs</h2>
-            <!-- Display recommended jobs dynamically here -->
-            <p>These jobs are recommended for you based on your profile.</p>
+        <div class="sidebar">
+            <a href="#">
+                <span class="material-icons-sharp">
+                    dashboard
+                </span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    person_outline
+                </span>
+                <h3>Friends</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    chat
+                </span>
+                <h3>Messages</h3>
+                <span class="message-count">2</span>
+            </a>
+            <a href="#" >
+                <span class="material-icons-sharp">
+                    insights
+                </span>
+                <h3>Analytics</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    bookmark
+                    </span>
+                <h3>Saved Jobs</h3>
+            </a>
+            </a>
+            <a href="faq.html">
+                <span class="material-icons-sharp">
+                    quiz
+                    </span>
+                <h3>FAQs</h3>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    sticky_note_2
+                    </span>
+                <h3>Post</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    settings
+                    </span>
+                <h3>Settings</h3>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    logout
+                    </span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
+     <!-- Main Content -->
+    <main>
+        <h1>Analytics</h1>
+            <!-- Analyses -->
+        <div class="analyse">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                        <h3>Total Users</h3>
+                            <h1>3,225</h1>
+                        </div>
+                        <div class="progresss">
+                          <svg>
+                               <circle cx="38" cy="38" r="36"></circle>
+                         </svg>
+                         <div class="percentage">
+                             <p>+81%</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visits">
+                <div class="status">
+                    <div class="info">
+                        <h3>New Users</h3>
+                        <h1>128</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>-48%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searches">
+                <div class="status">
+                    <div class="info">
+                        <h3>Profile Views</h3>
+                        <h1>55</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>+21%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Analyses -->
+             <!-- New Users Section -->
+             <div class="new-users">
+                <h2>Best Fits</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="images/profile-2.jpg">
+                        <h2>John</h2>
+                        <p>Washington, D.C.</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/profile-3.jpg">
+                        <h2>George</h2>
+                        <p>Philadelphia, PA</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/profile-4.jpg">
+                        <h2>Jacob</h2>
+                        <p>Los Angeles, CA</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/plus.png">
+                        <h2>More</h2>
+                        <p>New Users</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End of New Users Section -->
+            
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2>Recent Messages</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>User Organization</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+            <!-- End of Recent Orders -->
+            <div id="faq-content"></div>
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Reza</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Username</h2>
+                    <p>Job <Title></Title></p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+            <div class="notification deactive">
+                <div class="icon">
+                    <span class="material-icons-sharp">
+                        edit
+                    </span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>Workshop</h3>
+                        <small class="text_muted">
+                            08:00 AM - 12:00 PM
+                        </small>
+                    </div>
+                    <span class="material-icons-sharp">
+                        more_vert
+                    </span>
+                </div>
+            </div>
+
+            <div class="notification add-reminder">
+                <div>
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Add Reminder</h3>
+                </div>
+            </div>
+
         </div>
 
-        <div id="savedTab" style="display: none;">
-            <h2>Saved Jobs</h2>
-            <!-- Display saved jobs dynamically here -->
-            <p>Jobs you have saved for later viewing.</p>
-        </div>
-
-        <div id="appliedTab" style="display: none;">
-            <h2>Applied Jobs</h2>
-            <!-- Display applied jobs dynamically here -->
-            <p>Jobs you have applied for.</p>
-        </div>
-        <!-- Add content for other tabs as needed -->
     </div>
 
-    <script>
-        function showTab(tabName) {
-            // Hide all tabs
-            document.getElementById('recommendedTab').style.display = 'none';
-            document.getElementById('savedTab').style.display = 'none';
-            document.getElementById('appliedTab').style.display = 'none';
-            // Add more tabs as needed
 
-            // Show the selected tab
-            document.getElementById(tabName + 'Tab').style.display = 'block';
+</div>
 
-            // Update active state in tabs
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            document.querySelector('.tab.' + tabName).classList.add('active');
-        }
-    </script>
+        
+
+            
+
+
+
+</div>
+
+<script src="index.js"></script>
 </body>
-
 </html>
